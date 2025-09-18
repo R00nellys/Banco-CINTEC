@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atletas - CINTEC</title>
+  <link rel="stylesheet" href="atletasE.css" />
+</head>
+<body>
+  <header>
+    <!-- Logo Esquerda -->
+    <img src="Captura de tela 2025-09-08 132254.png" alt="Logo Cintec Esquerda" class="logo-esquerda">
+    <!-- Logo Central -->
+    <img src="Captura de tela 2025-09-08 132328.png" alt="Logo Cintec Central" class="logo-central">
+  </header>
+
+  <main>
+    <!-- Título -->
+    <div class="caixa-titulo">
+      <h2>Atletas</h2>
+    </div>
+
+    <!-- Barra de busca -->
+    <div class="barra-pesquisa">
+      <span class="icone">&#128269;</span>
+      <input type="text" placeholder="Buscar atleta..." />
+      <button class="menu-btn" aria-label="Menu">&#9776;</button>
+    </div>
+
+    <!-- Lista de Cards dos atletas -->
+    <div class="lista-atletas">
+      <!-- Exemplo de card (repita conforme necessário) -->
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> João Silva</p>
+          <p><strong>Turma:</strong> Delta 2</p>
+          <p><strong>Idade:</strong> 16</p>
+          <p><strong>Títulos:</strong> 3</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Maria Santos</p>
+          <p><strong>Turma:</strong> Alfa 1</p>
+          <p><strong>Idade:</strong> 15</p>
+          <p><strong>Títulos:</strong> 1</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+
+      <!-- Repita outros cards aqui -->
+    </div>
+  </main>
+
+  <!-- Modal overlay: aparece sobre TODO o conteúdo -->
+  <div class="modal-overlay" id="cardExpandido" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="fechar" aria-label="Fechar modal">&times;</button>
+
+      <div class="topo">
+        <div class="foto">
+          <img src="" alt="Foto do atleta no modal">
+        </div>
+        <div class="dados" id="modalDados">
+          <h3 id="modalTitle">Detalhes do Atleta</h3>
+          <p><strong>Nome:</strong> <span id="mNome"></span></p>
+          <p><strong>Turma:</strong> <span id="mTurma"></span></p>
+          <p><strong>Idade:</strong> <span id="mIdade"></span></p>
+          <p><strong>Títulos:</strong> <span id="mTitulos"></span></p>
+        </div>
+      </div>
+
+      <div class="estatisticas" aria-hidden="false">
+        <div class="caixa"></div>
+        <div class="caixa"></div>
+        <div class="caixa"></div>
+        <div class="caixa"></div>
+      </div>
+
+      <div class="info-extra">
+        <p><strong>Modalidade:</strong> <span id="mModalidade">—</span></p>
+        <p><strong>Classificação:</strong> <span id="mClassificacao">—</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Abre o modal e popula com dados do card clicado
+    (function () {
+      const expandirBtns = document.querySelectorAll(".expandir");
+      const overlay = document.getElementById("cardExpandido");
+      const modalContent = overlay.querySelector(".modal-content");
+      const fecharBtn = overlay.querySelector(".fechar");
+
+      // elementos do modal para popular
+      const fotoModal = overlay.querySelector(".foto img");
+      const mNome = document.getElementById("mNome");
+      const mTurma = document.getElementById("mTurma");
+      const mIdade = document.getElementById("mIdade");
+      const mTitulos = document.getElementById("mTitulos");
+      const mModalidade = document.getElementById("mModalidade");
+      const mClassificacao = document.getElementById("mClassificacao");
+
+      function openModalFromCard(card) {
+        // popula imagem
+        const img = card.querySelector("img");
+        if (img) fotoModal.src = img.src;
+
+        // pega textos das <p> dentro de .info (assume ordem: Nome, Turma, Idade, Títulos)
+        const ps = Array.from(card.querySelectorAll(".info p"));
+        function valueFromP(p) {
+          if (!p) return "";
+          const parts = p.textContent.split(":");
+          return parts.slice(1).join(":").trim();
+        }
+        mNome.textContent = valueFromP(ps[0]) || "—";
+        mTurma.textContent = valueFromP(ps[1]) || "—";
+        mIdade.textContent = valueFromP(ps[2]) || "—";
+        mTitulos.textContent = valueFromP(ps[3]) || "—";
+
+        // se você quiser popular modalidade/classificação dinamicamente,
+        // coloque atributos data-modalidade / data-classificacao no card e leia-os aqui:
+        mModalidade.textContent = card.dataset.modalidade || "—";
+        mClassificacao.textContent = card.dataset.classificacao || "—";
+
+        // abrir overlay
+        overlay.style.display = "flex";
+        overlay.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open"); // bloqueia scroll
+        // foco para acessibilidade
+        modalContent.focus();
+      }
+
+      function closeModal() {
+        overlay.style.display = "none";
+        overlay.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+      }
+
+      expandirBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          const card = btn.closest(".card");
+          if (!card) return;
+          openModalFromCard(card);
+        });
+      });
+
+      // fechar pelo botão
+      fecharBtn.addEventListener("click", closeModal);
+
+      // fechar clicando fora do conteúdo (no backdrop)
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) closeModal();
+      });
+
+      // fechar com ESC
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && overlay.style.display === "flex") {
+          closeModal();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

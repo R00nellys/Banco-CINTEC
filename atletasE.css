@@ -1,0 +1,219 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Tipografia / cores base */
+body {
+  font-family: "Cooper Black", "Trebuchet MS", sans-serif;
+  background-color: #fffcee;
+  color: #1a5a61;
+  min-height:100vh;
+}
+
+/* Bloqueia scroll quando modal aberto */
+body.modal-open { overflow: hidden; }
+
+/* Header (logos) */
+header {
+  display: flex
+  ;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #c69639;
+      padding: 15px 45px;
+      border-bottom: 3px solid #1a5a61;
+      position: relative;
+}
+.logo-esquerda { height: 130px; }
+.logo-central {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  height: 130px;
+}
+
+/* Caixa título */
+.caixa-titulo {
+  background-color: #c69639;
+  margin: 20px auto;
+  padding: 14px;
+  border: 3px solid #1a5a61;
+  border-radius: 20px;
+  width: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1a5a61;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+  display:flex;
+  align-items:center;
+  background-color: #c69639;
+  border:3px solid #1a5a61;
+  border-radius:40px;
+  margin: 20px auto;
+  padding:8px 15px;
+  width:80%;
+  max-width:700px;
+  gap:10px;
+}
+.barra-pesquisa input {
+  flex:1;
+  border:none;
+  outline:none;
+  font-size:1.1rem;
+  background:transparent;
+  color:#1a5a61;
+}
+.barra-pesquisa .icone { font-size:1.2rem; }
+.barra-pesquisa .menu-btn { background:none; border:none; font-size:1.2rem; cursor:pointer; color:#1a5a61; }
+
+/* Lista de atletas: 5 colunas iguais usando 1fr */
+.lista-atletas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+  align-items:start;
+  max-width:1200px;
+  margin: 0 auto 80px;
+}
+
+/* Card compacto */
+.card {
+  background-color: #fdfbed;
+  border:3px solid #1a5a61;
+  border-radius:14px;
+  padding:12px;
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:10px;
+  border:2px solid #1a5a61;
+}
+.card .info { font-size:0.95rem; color:#1a5a61; }
+.card .info p { margin-bottom:6px; }
+.card .expandir {
+  margin-top:auto;
+  background:none;
+  border:2px solid #1a5a61;
+  padding:6px 8px;
+  border-radius:8px;
+  cursor:pointer;
+  color:#1a5a61;
+}
+.card .expandir:hover { background:#c69639; color:#fff; }
+
+/* -----------------------
+   MODAL / OVERLAY (aparece sobre todo o conteúdo)
+   ----------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;                /* cobre toda a viewport */
+  display: none;           /* controlado via JS */
+  align-items: flex-start; /* aparece um pouco abaixo do topo (como na sua imagem) */
+  justify-content: center;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
+  padding-top: 40px;       /* distância do topo */
+  overflow-y: auto;
+}
+
+/* caixa interna do modal (o "card expandido") */
+.modal-content {
+  position: relative;
+  width: 760px;
+  max-width: 95%;
+  background-color: #fdfbed;
+  border-radius: 18px;
+  border: 3px solid #1a5a61;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  outline: none;           /* usado para foco quando aberto */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-height: calc(100vh - 80px);
+}
+
+/* botão fechar (no canto superior direito da modal) */
+.modal-content .fechar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: 2px solid #1a5a61;
+  color: #1a5a61;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding:6px 10px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.modal-content .fechar:hover { background:#c69639; color:#fff; }
+
+/* Topo: foto grande + dados à direita */
+.topo {
+  display:flex;
+  gap: 24px;
+  align-items:flex-start;
+}
+.foto img {
+  width: 260px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #1a5a61;
+}
+.dados { color:#1a5a61; font-size:1.15rem; line-height:1.8; }
+.dados h3 { margin-bottom:8px; color:#1a5a61; }
+
+/* linha de quadrados (estatísticas) */
+.estatisticas {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.estatisticas .caixa {
+  height: 64px;
+  border: 2px solid #1a5a61;
+  border-radius:6px;
+  background: #fffcee;
+}
+
+/* seção Modalidade / Classificação */
+.info-extra {
+  margin-top: 12px;
+  font-size:1.1rem;
+  color:#1a5a61;
+  display:flex;
+  gap: 40px;
+}
+
+/* Responsivo */
+@media (max-width: 1100px) {
+  .lista-atletas { grid-template-columns: repeat(4, 1fr); }
+  .modal-content { width: 680px; }
+  .foto img { width: 220px; height: 280px; }
+}
+
+@media (max-width: 900px) {
+  .lista-atletas { grid-template-columns: repeat(3, 1fr); }
+  .topo { flex-direction: column; align-items:center; text-align:center; }
+  .dados { text-align:center; }
+  .modal-content { width: 92%; padding:18px; }
+  .foto img { width: 100%; height: 260px; }
+}
+
+@media (max-width: 600px) {
+  .lista-atletas { grid-template-columns: repeat(2, 1fr); }
+  .card img { height: 140px; }
+  .modal-content { padding:14px; }
+  .estatisticas .caixa { height:48px; }
+}

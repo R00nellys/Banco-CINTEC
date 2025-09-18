@@ -1,0 +1,87 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Cooper Black', sans-serif;
+    background-color: #fffcee; /* fundo claro */
+    color: #1a5a61; /* verde petróleo */
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c69639; /* mostarda */
+    padding: 15px 45px;
+    border-bottom: 3px solid #1a5a61; /* verde petróleo */
+    position: relative;
+  }
+  
+  .logo-esquerda {
+    height: 130px;
+  }
+  
+  .logo-central {
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Caixa do formulário */
+  .caixa-esqueceu {
+    background-color: #c69639; /* mostarda */
+    margin: 80px auto;
+    padding: 40px;
+    border: 4px solid #1a5a61;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .caixa-esqueceu form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  /* Label */
+  label {
+    font-size: 22px;
+    color: #1a5a61; /* verde petróleo */
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  
+  /* Input */
+  input[type="email"] {
+    padding: 12px;
+    border: 2px solid #1a5a61;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  /* Botão */
+  button {
+    padding: 15px;
+    font-size: 20px;
+    border: 3px solid #1a5a61;
+    border-radius: 20px;
+    background-color: #fdfbed;
+    color: #1a5a61;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  

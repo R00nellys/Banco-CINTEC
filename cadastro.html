@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Projeto CINTEC</title>
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+  <header>
+    <!-- Logo Esquerda -->
+    <img src="Captura de tela 2025-09-08 132254.png" alt="Logo Cintec Esquerda" class="logo-esquerda">
+    <!-- Logo Central -->
+    <img src="Captura de tela 2025-09-08 132328.png" alt="Logo Cintec Central" class="logo-central">
+  </header>
+
+  <main>
+    <div class="formulario">
+      <h2>Cadastro</h2>
+
+      <form>
+        <!-- Campo Nome -->
+        <div class="campo">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <!-- Campo E-mail ou Celular -->
+        <div class="campo">
+          <label for="email">E-mail ou Celular:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Campo Senha -->
+        <div class="campo">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required>
+        </div>
+
+        <!-- Esqueci a senha -->
+        <div class="campo">
+          <a href="esqueceu.html">Esqueceu a senha?</a>
+        </div>
+
+        <!-- Botões -->
+        <div class="botoes">
+          <button type="submit" class="btn cadastrar">Cadastrar</button>
+          <button type="button" class="btn entrar">Entrar (Já tenho conta)</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

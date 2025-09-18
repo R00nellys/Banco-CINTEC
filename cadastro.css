@@ -1,0 +1,127 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Cooper Black', sans-serif; /* Fonte Cooper BT */
+    background-color: #fffcee; /* fundo geral claro */
+  }
+  
+  /* Header com logos */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c69639; /* mostarda */
+    padding: 15px 45px;
+    position: relative;
+    border-bottom: 3px solid #1a5a61; /* borda fina de verde petróleo */
+  }
+  
+  .logo-esquerda {
+    height: 120px;
+  }
+  
+  .logo-central {
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Formulário de Cadastro */
+  .formulario {
+    background-color: #c69639; /* mostarda */
+    margin: 20px auto; /* diminui a margem superior para aproximar o formulário do header */
+    padding: 60px 90px; /* aumentei o padding */
+    border-radius: 30px;
+    border: 5px solid #1a5a61; /* borda verde petróleo */
+    width: 100%; /* Tornando o formulário mais largo */
+    max-width: 800px; /* Aumentei a largura máxima */
+    text-align: center;
+    color: #000;
+  }
+  
+  h2 {
+    font-size: 46px; /* Aumentei o título (1.1x maior que a versão original) */
+    margin-bottom: 45px; /* aumentei a margem */
+    color: #1a5a61; /* verde petróleo */
+  }
+  
+  /* Campos do formulário */
+  .campo {
+    margin-bottom: 37px; /* aumentei a margem entre campos */
+    text-align: left;
+  }
+  
+  .campo label {
+    display: block;
+    font-size: 26px; /* aumentei o tamanho da fonte */
+    margin-bottom: 12px; /* aumentei a margem inferior */
+    color: #1a5a61; /* verde petróleo */
+  }
+  
+  .campo input {
+    width: 100%; /* Tornando os campos de input mais largos */
+    padding: 18px; /* aumentei o padding do campo */
+    font-size: 26px; /* aumentei o tamanho da fonte */
+    border: 2px solid #1a5a61; /* borda verde petróleo */
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .campo input:focus {
+    outline: none;
+    border-color: #be271b; /* borda vermelha */
+  }
+  
+  /* Link "Esqueceu a senha?" */
+  .campo a {
+    font-size: 23px; /* aumentei o tamanho do link */
+    color: #be271b; /* vermelho */
+    text-decoration: none;
+  }
+  
+  .campo a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botões */
+  .botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* aumentei o espaço entre os botões */
+  }
+  
+  .btn {
+    font-size: 33px; /* aumentei o tamanho da fonte dos botões */
+    padding: 22px; /* aumentei o padding do botão */
+    border-radius: 8px;
+    background-color: #fdfbed;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #1a5a61; /* verde petróleo */
+    width: 100%; /* Botões mais largos */
+  }
+  
+  .btn.cadastrar {
+    color: #1a5a61; /* verde petróleo */
+  }
+  
+  .btn.entrar {
+    color: #1a5a61; /* verde petróleo */
+    background-color: #fffcee;
+    font-size: 29px; /* aumentei o tamanho da fonte */
+  }
+  
+  .btn:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+  }
+  
+  .btn.entrar:hover {
+    background-color: #fdfbed; /* Muda a cor de fundo do botão */
+  }
+  

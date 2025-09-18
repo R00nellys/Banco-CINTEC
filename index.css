@@ -1,0 +1,98 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cooper Black', sans-serif; /* Fonte Cooper BT */
+    background-color: #fffcee; /* fundo geral claro */
+}
+
+/* Header com logos */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c69639; /* mostarda */
+    padding: 15px 45px; /* aumentei o padding */
+    position: relative;
+    border-bottom: 3px solid #1a5a61; /* borda fina de verde petróleo */
+}
+
+.logo-esquerda {
+    height: 130px; /* Aumentei o tamanho da logo */
+}
+
+/* Logo central - posicionado ao centro */
+.logo-central {
+    height: 130px; /* Aumentei o tamanho da logo central */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Caixa de seleção de função */
+.caixa-funcao {
+    background-color: #c69639; /* mostarda */
+    margin: 75px auto; /* aumentei a margem superior */
+    padding: 45px 60px; /* aumentei o padding */
+    border-radius: 30px; /* aumentei o raio da borda */
+    border: 5px solid #1a5a61; /* aumentei a espessura da borda */
+    width: 90%;
+    max-width: 750px; /* aumentei a largura da caixa */
+    text-align: center;
+    color: #000000; /* texto preto */
+}
+
+.caixa-funcao p {
+    font-size: 27px; /* aumentei o tamanho da fonte */
+    margin-bottom: 45px; /* aumentei a margem inferior */
+}
+
+.azul {
+    color: #1a5a61; /* verde petróleo */
+}
+
+.vermelho {
+    color: #be271b; /* vermelho */
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* aumentei o espaço entre os botões */
+}
+
+.btn {
+    font-size: 30px; /* aumentei o tamanho da fonte dos botões */
+    padding: 20px;
+    border: 5px solid; /* aumentei a espessura da borda */
+    border-radius: 45px; /* aumentei o raio da borda */
+    background-color: #fdfbed;
+    cursor: pointer;
+    transition: all 0.3s ease; /* transição suave */
+}
+
+.btn.espectador {
+    border-color: #1a5a61; /* verde petróleo */
+    color: #1a5a61; /* verde petróleo */
+}
+
+.btn.atleta {
+    border-color: #be271b; /* vermelho */
+    color: #be271b; /* vermelho */
+}
+
+.btn.diretor {
+    border-color: #413e43; /* cinza escuro */
+    color: #413e43; /* cinza escuro */
+}
+
+/* Efeito hover: Aumenta o tamanho ao passar o mouse, sem mudar a cor */
+.btn:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+    /* Remover a mudança de cor de fundo */
+}
