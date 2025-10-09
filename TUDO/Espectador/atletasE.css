@@ -2,6 +2,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 /* Tipografia / cores base */
+
 body {
   font-family: "Cooper Black", "Trebuchet MS", sans-serif;
   background-color: #fffcee;
@@ -23,13 +24,38 @@ header {
       border-bottom: 3px solid #1a5a61;
       position: relative;
 }
-.logo-esquerda { height: 130px; }
+/* Logo Esquerda */
+.logo-container {
+  position: relative; 
+  display: inline-block;
+}
+
+.logo-esquerda {
+  height: 130px;
+  display: block;
+}
+
+/* Botão transparente sobre a logo */
+.logo-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* cobre toda a largura da logo */
+  height: 100%; /* cobre toda a altura da logo */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0; /* invisível mas clicável */
+}
+
 .logo-central {
   position: absolute;
   left:50%;
   transform: translateX(-50%);
   height: 130px;
 }
+
 
 /* Caixa título */
 .caixa-titulo {
@@ -217,3 +243,32 @@ header {
   .modal-content { padding:14px; }
   .estatisticas .caixa { height:48px; }
 }
+/* Card especial para adicionar atleta */
+.add-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #c69639;
+  border: 3px dashed #1a5a61;
+  color: #1a5a61;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-card:hover {
+  background-color: #e7b84e;
+  transform: scale(1.05);
+}
+
+.add-content {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.add-content .plus {
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+

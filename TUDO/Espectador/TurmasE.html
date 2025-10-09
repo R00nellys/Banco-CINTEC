@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="TurmasE.css">
 </head>
 <body>
-    <header>
-        <!-- Logo Esquerda -->
-        <img src="Captura de tela 2025-09-08 132254.png" alt="Logo Cintec Esquerda" class="logo-esquerda">
-        <!-- Logo Central -->
-        <img src="Captura de tela 2025-09-08 132328.png" alt="Logo Cintec Central" class="logo-central">
-      </header>
+  <header>
+    <!-- Logo Esquerda com botão invisível -->
+    <div class="logo-container">
+      <img src="Captura de tela 2025-09-08 132254.png" 
+           alt="Logo Cintec Esquerda" 
+           class="logo-esquerda">
+      <a href="menuE.html" class="logo-link" title="Ir para o Menu"></a>
+    </div>
+  
+    <!-- Logo Central -->
+    <img src="Captura de tela 2025-09-08 132328.png" 
+         alt="Logo Cintec Central" 
+         class="logo-central">
+  </header>
 
   <main class="conteudo">
     <div class="titulo-box">
@@ -25,29 +33,52 @@
       <button id="btn-tabela" class="aba">🔲</button>
     </div>
 
-    <!-- Container que alterna -->
+    <!-- View em formato de cards -->
     <section id="view-linha" class="view ativo">
       <ul>
         <li>
-          <h3>Turma <strong>ALFA</strong></h3>
-          <div class="linha-item">
-            <span>Modalidade 1</span>
-            <span>Medalha</span>
-          </div>
-          <div class="linha-item">
-            <span>Modalidade 2</span>
-            <span>Medalha</span>
-          </div>
-          <div class="linha-item">
-            <span>Modalidade 3</span>
-            <span>Medalha</span>
-          </div>
+          <details>
+            <summary><h3>Turma <strong>ALFA</strong></h3></summary>
+            <div class="linha-item">
+              <span>Modalidade 1</span>
+              <span>Medalha</span>
+            </div>
+            <div class="linha-item">
+              <span>Modalidade 2</span>
+              <span>Medalha</span>
+            </div>
+            <div class="linha-item">
+              <span>Modalidade 3</span>
+              <span>Medalha</span>
+            </div>
+          </details>
         </li>
-        <li><h3>Turma BETA</h3></li>
-        <li><h3>Turma GAMA</h3></li>
+        <li>
+          <details>
+            <summary><h3>Turma BETA</h3></summary>
+            <div class="linha-item">
+              <span>Modalidade 1</span>
+              <span>Medalha</span>
+            </div>
+            <div class="linha-item">
+              <span>Modalidade 2</span>
+              <span>Medalha</span>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary><h3>Turma GAMA</h3></summary>
+            <div class="linha-item">
+              <span>Modalidade 1</span>
+              <span>Medalha</span>
+            </div>
+          </details>
+        </li>
       </ul>
     </section>
 
+    <!-- View em formato de tabela -->
     <section id="view-tabela" class="view">
       <table>
         <thead>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipes/Turmas - CINTEC</title>
+  <link rel="stylesheet" href="TurmasA.css">
+</head>
+<body>
+  <header>
+    <!-- Logo Esquerda com botão invisível -->
+    <div class="logo-container">
+      <img src="Logo Esquerda-VIP.png" 
+           alt="Logo Cintec Esquerda" 
+           class="logo-esquerda">
+      <a href="menuA.html" class="logo-link" title="Ir para o Menu"></a>
+    </div>
+  
+    <!-- Logo Central -->
+    <img src="Logo Central-VIP.png" 
+         alt="Logo Cintec Central" 
+         class="logo-central">
+  </header>
+
+  <main class="conteudo">
+    <div class="titulo-box">
+      <h2>Equipes/Turmas</h2>
+    </div>
+
+    <!-- Botões de Alternância -->
+    <div class="abas">
+      <button id="btn-linha" class="aba ativa">👤</button>
+      <button id="btn-tabela" class="aba">🔲</button>
+    </div>
+
+    <!-- View em formato de cards -->
+    <section id="view-linha" class="view ativo">
+      <ul>
+        <li>
+          <details>
+            <summary><h3>Turma <strong>ALFA</strong></h3></summary>
+            <div class="linha-item">
+              <span>Modalidade 1</span>
+              <span>Medalha</span>
+            </div>
+            <div class="linha-item">
+              <span>Modalidade 2</span>
+              <span>Medalha</span>
+            </div>
+            <div class="linha-item">
+              <span>Modalidade 3</span>
+              <span>Medalha</span>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary><h3>Turma BETA</h3></summary>
+            <div class="linha-item">
+              <span>Modalidade 1</span>
+              <span>Medalha</span>
+            </div>
+            <div class="linha-item">
+              <span>Modalidade 2</span>
+              <span>Medalha</span>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary><h3>Turma GAMA</h3></summary>
+            <div class="linha-item">
+              <span>Modalidade 1</span>
+              <span>Medalha</span>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </section>
+
+    <!-- View em formato de tabela -->
+    <section id="view-tabela" class="view">
+      <table>
+        <thead>
+          <tr>
+            <th>Turma</th>
+            <th>Ouro</th>
+            <th>Prata</th>
+            <th>Bronze</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ALFA</td>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>BETA</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>GAMA</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    const btnLinha = document.getElementById("btn-linha");
+    const btnTabela = document.getElementById("btn-tabela");
+    const viewLinha = document.getElementById("view-linha");
+    const viewTabela = document.getElementById("view-tabela");
+
+    btnLinha.addEventListener("click", () => {
+      btnLinha.classList.add("ativa");
+      btnTabela.classList.remove("ativa");
+      viewLinha.classList.add("ativo");
+      viewTabela.classList.remove("ativo");
+    });
+
+    btnTabela.addEventListener("click", () => {
+      btnTabela.classList.add("ativa");
+      btnLinha.classList.remove("ativa");
+      viewTabela.classList.add("ativo");
+      viewLinha.classList.remove("ativo");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf7e3;
+    color: #1f4d4d;
+  }
+  
+  /* Header */
+  header {
+    display: flex
+    ;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #40403f;
+        padding: 15px 45px;
+        border-bottom: 3px solid #c5953a;
+        position: relative;
+  }
+  
+/* Logo Esquerda */
+.logo-container {
+  position: relative; 
+  display: inline-block;
+}
+
+.logo-esquerda {
+  height: 130px;
+  display: block;
+}
+
+/* Botão transparente sobre a logo */
+.logo-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* cobre toda a largura da logo */
+  height: 100%; /* cobre toda a altura da logo */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0; /* invisível mas clicável */
+}
+  
+  .logo-central {
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Título */
+  .modalidades-title {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fdf7e3;
+    border: 2px solid #1f4d4d;
+    border-radius: 15px;
+    width: 50%;
+  }
+  
+  /* Lista */
+  .modalidades-list {
+    width: 80%;
+    margin: 0 auto 50px auto;
+    padding: 20px;
+    border: 2px solid #1f4d4d;
+    border-radius: 25px;
+    background-color: #fdf7e3;
+  }
+  
+  .modalidades-list ul {
+    list-style-type: none;
+  }
+  
+  .modalidades-list li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+  }
+  
+  /* Expansível */
+  details summary {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 2px solid #1f4d4d;
+    border-radius: 10px;
+    background-color: #fff5d7;
+    transition: background-color 0.2s ease;
+  }
+  
+  details summary:hover {
+    background-color: #ffe9a7;
+  }
+  
+  details[open] summary {
+    background-color: #c69639;
+    color: #fff;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* Cards ao expandir */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .card {
+    width: 180px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 12px;
+    font-weight: bold;
+    background-color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* Medalhas */
+  .card.ouro {
+    border-color: #FFD700;
+  }
+  
+  .card.prata {
+    border-color: #C0C0C0;
+  }
+  
+  .card.bronze {
+    border-color: #CD7F32;
+  }
+  
+  /* Animação */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
