@@ -1,4 +1,6 @@
-function cadastrar() {
+function cadastrar(event) {
+  // Impede que o formulário recarregue a página ao ser enviado
+  event.preventDefault();
   const nome = document.getElementById('nome').value.trim();
   const email = document.getElementById('email').value;
   const senha = document.getElementById('senha').value;
@@ -9,7 +11,7 @@ function cadastrar() {
     senha
   };
 
-  db.ref('x').push(novoRegistro)
+  db.ref('users_eric').push(novoRegistro)
     .then(() => {
       alert("Registrado com sucesso!");
       document.getElementById('nome').value = '';

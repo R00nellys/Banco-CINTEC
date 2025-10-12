@@ -18,7 +18,7 @@
     <div class="formulario">
       <h2>Cadastro</h2>
 
-      <form>
+      <form onsubmit="cadastrar(event)">
         <!-- Campo Nome -->
         <div class="campo">
           <label for="nome">Nome:</label>
@@ -44,7 +44,7 @@
 
         <!-- Botões -->
         <div class="botoes">
-          <button onclick="cadastrar()" type="submit" class="btn cadastrar">Cadastrar</button>
+          <button type="submit" class="btn cadastrar">Cadastrar</button>
           <button type="button" class="btn entrar">Entrar (Já tenho conta)</button>
         </div>
       </form>
