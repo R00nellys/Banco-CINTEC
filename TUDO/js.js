@@ -1,12 +1,12 @@
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDcn0AfM0ljA72-c7v8u86FCYA3uPMnBxw",
-  authDomain: "arquivox-c9d74.firebaseapp.com",
-  databaseURL: "https://arquivox-c9d74-default-rtdb.firebaseio.com",
-  projectId: "arquivox-c9d74",
-  storageBucket: "arquivox-c9d74.firebasestorage.app",
-  messagingSenderId: "235350186717",
-  appId: "1:235350186717:web:6273c8f7e998257d5e9934"
+  apiKey: "AIzaSyCIuz4S5EEE_R4Xw2OHXeaqcqJFuG5ATaU",
+  authDomain: "banco-cintec.firebaseapp.com",
+  databaseURL: "https://banco-cintec-default-rtdb.firebaseio.com",
+  projectId: "banco-cintec",
+  storageBucket: "banco-cintec.firebasestorage.app",
+  messagingSenderId: "48060543391",
+  appId: "1:48060543391:web:9210459a2cd5c96833cdaa"
 };
 
 // Initialize Firebase

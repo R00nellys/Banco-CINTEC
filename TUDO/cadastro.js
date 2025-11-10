@@ -11,11 +11,12 @@ function cadastrar(event) {
     senha
   };
 
-  db.ref('users_eric').push(novoRegistro)
+  db.ref('usuarios_teste').push(novoRegistro)
     .then(() => {
       alert("Registrado com sucesso!");
       document.getElementById('nome').value = '';
       document.getElementById('email').value = '';
       document.getElementById('senha').value = '';
+      window.location.href='menuE.html'
     });
 }

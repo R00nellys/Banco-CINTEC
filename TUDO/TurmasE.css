@@ -63,6 +63,26 @@ header {
   margin-bottom: 15px;
   border: 2px solid #084c4c;
 }
+.card {
+  border: 2px solid #084c4c;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: inline-block;
+  background-color: #fdfbec;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background-color: #f2e6b3;
+}
+
+.card.selecionado {
+  background-color: #f4a321;  /* alaranjado */
+  border-color: #d88000;
+  color: white;
+  box-shadow: 0 0 10px rgba(212, 119, 0, 0.8);
+}
 
 /* Abas */
 .abas {

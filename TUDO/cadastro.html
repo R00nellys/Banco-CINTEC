@@ -16,7 +16,10 @@
 
   <main>
     <div class="formulario">
+      <h3>Dica:<br>Faça senha fácil, não há como recuperar senha</h3>
       <h2>Cadastro</h2>
+      
+
 
       <form onsubmit="cadastrar(event)">
         <!-- Campo Nome -->
@@ -44,8 +47,9 @@
 
         <!-- Botões -->
         <div class="botoes">
-          <button type="submit" class="btn cadastrar">Cadastrar</button>
-          <button type="button" class="btn entrar">Entrar (Já tenho conta)</button>
+          <!-- <button type="submit" class="btn cadastrar" onclick="window.location.href='menuE.html'">Cadastrar </button> -->
+          <button type="submit" class="btn cadastrar" >Cadastrar </button>
+          <button type="button" class="btn entrar" onclick="window.location.href='login.html'">Entrar (Já tenho conta)</button>
         </div>
       </form>
     </div>
@@ -55,6 +59,6 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 
   <script src="cadastro.js"></script>
-  <script src="../js.js"></script>
+  <script src="js.js"></script>
 </body>
 </html>

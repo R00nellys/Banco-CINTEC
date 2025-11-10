@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: "Cooper Black", sans-serif; /* Mesma fonte do cadastro */
+  background-color: #fffcee; /* fundo geral claro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header com logos */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c69639; /* mostarda */
+  padding: 15px 45px;
+  position: relative;
+  border-bottom: 3px solid #1a5a61; /* borda verde petróleo */
+  width: 100%;
+}
+
+.logo-esquerda {
+  height: 120px;
+}
+
+.logo-central {
+  height: 130px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Cartão de login */
+.card {
+  background-color: #c69639; /* mostarda */
+  border: 5px solid #1a5a61; /* verde petróleo */
+  border-radius: 30px;
+  padding: 60px 90px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #000;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Título e subtítulo */
+.card h1 {
+  font-size: 46px;
+  color: #1a5a61; /* verde petróleo */
+  margin-bottom: 30px;
+}
+
+.card p {
+  font-size: 25px;
+  color: #413e43; /* cinza escuro */
+  margin-bottom: 35px;
+}
+
+/* Campos de entrada */
+.input-group {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #1a5a61;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 18px;
+  font-size: 26px;
+  border: 2px solid #1a5a61;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #be271b; /* vermelho */
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(190, 39, 27, 0.4);
+}
+
+/* Link "Esqueceu a senha?" */
+.links {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.links a {
+  font-size: 23px;
+  color: #be271b; /* vermelho */
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Botão de login */
+.btn {
+  width: 100%;
+  padding: 22px;
+  border-radius: 8px;
+  font-size: 33px;
+  border: 2px solid #1a5a61;
+  background-color: #fdfbed;
+  color: #1a5a61;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #fffcee;
+}
+
+/* Texto inferior (cadastro) */
+.cadastro-link {
+  margin-top: 35px;
+  font-size: 23px;
+  color: #1a5a61;
+}
+
+.cadastro-link a {
+  color: #be271b;
+  text-decoration: none;
+}
+
+.cadastro-link a:hover {
+  text-decoration: underline;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .card {
+    padding: 40px 25px;
+  }
+
+  .card h1 {
+    font-size: 36px;
+  }
+
+  .input-group label,
+  .input-group input {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 25px;
+  }
+
+  .cadastro-link {
+    font-size: 18px;
+  }
+}

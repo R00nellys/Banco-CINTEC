@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atletas - CINTEC</title>
-  <link rel="stylesheet" href="atletasA.css" />
+  <link rel="stylesheet" href="atletasE.css" />
 </head>
 <body>
   <header>
     <!-- Logo Esquerda com botão invisível -->
     <div class="logo-container">
-      <img src="Logo Esquerda-VIP.png" 
+      <img src="Captura de tela 2025-09-08 132254.png" 
            alt="Logo Cintec Esquerda" 
            class="logo-esquerda">
-      <a href="menuA.html" class="logo-link" title="Ir para o Menu"></a>
+      <a href="menuE.html" class="logo-link" title="Ir para o Menu"></a>
     </div>
   
     <!-- Logo Central -->
-    <img src="Logo Central-VIP.png" 
+    <img src="Captura de tela 2025-09-08 132328.png" 
          alt="Logo Cintec Central" 
          class="logo-central">
   </header>
@@ -28,11 +28,19 @@
     <div class="caixa-titulo">
       <h2>Atletas</h2>
     </div>
+    <div class="caixa-dica">
+      <h2>Dicas:</h2>
+      <ul>
+        <li>Pesquise séries com números (ex: <strong>1</strong> - Primeirinho, <strong>2</strong> - Segundo, <strong>3</strong> - Terceirão).</li>
+        <li>A pesquisa funciona apenas para <strong>nome</strong> e <strong>turma</strong>.</li>
+        <li>Não esqueça dos <strong>acentos</strong>.</li>
+      </ul>
+    </div>
 
     <!-- Barra de busca -->
     <div class="barra-pesquisa">
       <span class="icone">&#128269;</span>
-      <input type="text" placeholder="Buscar atleta..." />
+      <input id="campoBusca" type="text" placeholder="Buscar atleta..." />
       <button class="menu-btn" aria-label="Menu">&#9776;</button>
     </div>
 
@@ -49,7 +57,7 @@
         </div>
         <button class="expandir">Expandir para mais</button>
       </div>
-
+      
       <div class="card">
         <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
         <div class="info">
@@ -60,13 +68,117 @@
         </div>
         <button class="expandir">Expandir para mais</button>
       </div>
-      <!-- Card para adicionar novo atleta -->
-    <div class="card add-card">
-      <div class="add-content">
-        <span class="plus">+</span>
-        <p>Adicionar atleta</p>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Pedro Almeida</p>
+          <p><strong>Turma:</strong> Gama 3</p>
+          <p><strong>Idade:</strong> 17</p>
+          <p><strong>Títulos:</strong> 2</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
       </div>
-    </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Ana Oliveira</p>
+          <p><strong>Turma:</strong> Beta 2</p>
+          <p><strong>Idade:</strong> 16</p>
+          <p><strong>Títulos:</strong> 4</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Lucas Pereira</p>
+          <p><strong>Turma:</strong> Ômega 1</p>
+          <p><strong>Idade:</strong> 15</p>
+          <p><strong>Títulos:</strong> 0</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Beatriz Costa</p>
+          <p><strong>Turma:</strong> Sigma 2</p>
+          <p><strong>Idade:</strong> 17</p>
+          <p><strong>Títulos:</strong> 2</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Rafael Lima</p>
+          <p><strong>Turma:</strong> Delta 1</p>
+          <p><strong>Idade:</strong> 18</p>
+          <p><strong>Títulos:</strong> 5</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Júlia Martins</p>
+          <p><strong>Turma:</strong> Alfa 3</p>
+          <p><strong>Idade:</strong> 16</p>
+          <p><strong>Títulos:</strong> 3</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Thiago Rocha</p>
+          <p><strong>Turma:</strong> Gama 2</p>
+          <p><strong>Idade:</strong> 17</p>
+          <p><strong>Títulos:</strong> 1</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Camila Ferreira</p>
+          <p><strong>Turma:</strong> Beta 1</p>
+          <p><strong>Idade:</strong> 15</p>
+          <p><strong>Títulos:</strong> 4</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Felipe Souza</p>
+          <p><strong>Turma:</strong> Sigma 3</p>
+          <p><strong>Idade:</strong> 18</p>
+          <p><strong>Títulos:</strong> 6</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
+      <div class="card">
+        <img src="Captura de tela 2025-09-08 132254.png" alt="Foto do atleta">
+        <div class="info">
+          <p><strong>Nome:</strong> Larissa Pinto</p>
+          <p><strong>Turma:</strong> Ômega 2</p>
+          <p><strong>Idade:</strong> 17</p>
+          <p><strong>Títulos:</strong> 2</p>
+        </div>
+        <button class="expandir">Expandir para mais</button>
+      </div>
+      
 
 
       <!-- Repita outros cards aqui -->
@@ -181,6 +293,26 @@
         }
       });
     })();
+  </script>
+  <script>
+    const campoBusca = document.getElementById("campoBusca");
+    const cards = document.querySelectorAll(".card");
+  
+    campoBusca.addEventListener("input", () => {
+      const termo = campoBusca.value.toLowerCase();
+  
+      cards.forEach(card => {
+        const nome = card.querySelector(".info p:nth-child(1)").textContent.toLowerCase();
+        const turma = card.querySelector(".info p:nth-child(2)").textContent.toLowerCase();
+  
+        // Se o termo estiver em nome ou turma, mostra o card
+        if (nome.includes(termo) || turma.includes(termo)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
   </script>
 </body>
 </html>

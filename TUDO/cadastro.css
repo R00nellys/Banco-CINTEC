@@ -45,10 +45,21 @@
     color: #000;
   }
   
+  
   h2 {
     font-size: 46px; /* Aumentei o título (1.1x maior que a versão original) */
     margin-bottom: 45px; /* aumentei a margem */
     color: #1a5a61; /* verde petróleo */
+  }
+  h3{
+    font-size: 36px; /* Aumentei o título (1.1x maior que a versão original) */
+    margin-bottom: 45px; /* aumentei a margem */
+    color: #1a5a61; /* verde petróleo */
+  }
+  h4{
+    font-size: 26px; /* Aumentei o título (1.1x maior que a versão original) */
+    margin-bottom: 45px; /* aumentei a margem */
+    color: #1a5a61; /* verde petróleo */ 
   }
   
   /* Campos do formulário */
